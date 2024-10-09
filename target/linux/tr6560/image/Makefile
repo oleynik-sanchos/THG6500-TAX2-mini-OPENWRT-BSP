@@ -12,7 +12,7 @@ IMG_PREFIX:=$(VERSION_DIST_SANITIZED)$(VERSION_NUMBER)
 #制作带DTB boot
 ADD_BOOT_DBT=$(shell cp $(KDIR)/image-$(DEVICE_DTS).dtb $(BUILD_DIR)/tri_boot/src/;  mv $(BUILD_DIR)/tri_boot/src/image-$(DEVICE_DTS).dtb $(BUILD_DIR)/tri_boot/src/boot.dtb;  chmod +x $(BUILD_DIR)/tri_boot/src/tools/gen_boot.sh;  sh $(BUILD_DIR)/tri_boot/src/tools/gen_boot.sh $(BUILD_DIR)/tri_boot/src;)
 
-COPY_BOOT=$(shell if [ -f $(BUILD_DIR)/tri_boot/bin/TR6560-bootimage.bin ];then cp $(BUILD_DIR)/tri_boot/bin/TR6560-bootimage.bin $(BIN_DIR)/TR6560-bootimage.bin;fi;)
+COPY_BOOT=$(shell if [ -f $(BUILD_DIR)/tri_boot/src/TR6560-bootimage.bin ];then cp $(BUILD_DIR)/tri_boot/src/TR6560-bootimage.bin $(BIN_DIR)/TR6560-bootimage.bin;fi;)
 define Build/append-boot
 
 	$(ADD_BOOT_DBT)  
