@@ -3,7 +3,7 @@
 
 ```
 binutils bzip2 diff find flex gawk gcc-6+ getopt grep install libc-dev libz-dev
-make4.1+ perl python3.6+ rsync subversion unzip which
+make4.1+ perl python3.6+ rsync subversion unzip which для Debian еще что то надо по ходу установить . Не запомнил(
 ```
 
 ### Quickstart
